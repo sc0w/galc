@@ -1,0 +1,47 @@
+##########################################################
+# THE FOLLOWING LINES IS USED BY docker-build
+##########################################################
+requires:
+  debian:
+    # Useful URL: https://github.com/mate-desktop/debian-packages
+    # Useful URL: https://salsa.debian.org/debian-mate-team/atril
+    - clang
+    - clang-tools
+    - debhelper 
+    - dh-autoreconf
+    - flex
+    - gettext
+    - intltool
+    - libgtk-3-dev
+    - libxml-parser-perl
+
+variables:
+  - CFLAGS="-Wall -Wextra -Wshadow -Wformat-nonliteral -Werror=format-security -Wpointer-arith -Wcast-align -Wmissing-declarations -Wredundant-decls -Wall -Wmissing-prototypes -Wbad-function-cast -Wcast-align -Wextra -Wformat-nonliteral -Wmissing-declarations -Wmissing-field-initializers -Wnested-externs -Wpointer-arith -Wredundant-decls -Wshadow -Wstrict-prototypes -Werror=format-security"
+  - 'CHECKERS="
+    -enable-checker deadcode.DeadStores
+    -enable-checker alpha.deadcode.UnreachableCode
+    -enable-checker alpha.core.CastSize
+    -enable-checker alpha.core.CastToStruct
+    -enable-checker alpha.core.IdenticalExpr
+    -enable-checker alpha.core.SizeofPtr
+    -enable-checker alpha.security.ArrayBoundV2
+    -enable-checker alpha.security.MallocOverflow
+    -enable-checker alpha.security.ReturnPtrRange
+    -enable-checker alpha.unix.SimpleStream
+    -enable-checker alpha.unix.cstring.BufferOverlap
+    -enable-checker alpha.unix.cstring.NotNullTerminated
+    -enable-checker alpha.unix.cstring.OutOfBounds
+    -enable-checker alpha.core.FixedAddr"'
+
+build_scripts:
+  - NOCONFIGURE=1 ./autogen.sh
+  - scan-build $CHECKERS ./configure
+  - scan-build $CHECKERS --keep-cc -o galc_clang_htmlreport make -j $CPU_COUNT
+  - tar -zcf galc_clang_htmlreport.tar.gz galc_clang_htmlreport
+  - curl -F file=@galc_clang_htmlreport.tar.gz -F expires=6m -F no_index=true https://api.anonymousfiles.io/ && echo
+
+after_scripts:
+  - make check
+  - make distcheck
+  - make clean
+  - make distclean
