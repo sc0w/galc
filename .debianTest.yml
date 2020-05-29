@@ -5,9 +5,9 @@ requires:
   debian:
     # Useful URL: https://github.com/mate-desktop/debian-packages
     # Useful URL: https://salsa.debian.org/debian-mate-team/atril
-    - build-essential
     - debhelper 
     - dh-autoreconf
+    - dh-make
     - flex
     - gettext
     - intltool
