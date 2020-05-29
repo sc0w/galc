@@ -18,6 +18,8 @@ build_scripts:
 #  - mkdir ../clang
 #  - cp -dpR . ../clang
 #  - cd ../clang
+  - export LOGNAME=logname
+  - export USER=user
   - mkdir ../galc-0.1.0
   - cp -dpR . ../galc-0.1.0
   - cd ../galc-0.1.0
