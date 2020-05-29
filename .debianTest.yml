@@ -14,8 +14,10 @@ requires:
     - libxml-parser-perl
 
 build_scripts:
+  - mkdir galc-0.1.0
+  - cd galc-0.1.0
+  - cp -dpR ../. .
   - cd ..
-  - mv rootdir/ galc-0.1.0/
   - tar -cf - galc-0.1.0 | xz -9 -c - > galc-0.1.0.tar.xz
   - cd galc-0.1.0
   - dh_make --single -y
