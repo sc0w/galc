@@ -1,6 +1,6 @@
 /*
  *  config_file.c - manages config file access.
- *	part of galculator
+ *	part of galc
  *  	(c) 2002-2014 Simon Flöry (simon.floery@rechenraum.com)
  *
  *  This program is free software; you can redistribute it and/or modify

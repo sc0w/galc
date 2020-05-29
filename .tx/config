@@ -1,7 +1,7 @@
 [main]
 host = https://www.transifex.com
  
-[MATE.galculator]
+[MATE.galc]
 file_filter = po/<lang>.po
-source_file = po/galculator.pot
+source_file = po/galc.pot
 source_lang = en

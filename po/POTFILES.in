@@ -1,7 +1,7 @@
-galculator.desktop.in
+galc.desktop.in
 src/callbacks.c
 src/main.c
-src/galculator.h
+src/galc.h
 src/calc_basic.c
 src/config_file.c
 src/display.c

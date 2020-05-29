@@ -1,6 +1,6 @@
 /*
- *  galculator.h - general definitions.
- *	part of galculator
+ *  galc.h - general definitions.
+ *	part of galc
  *  	(c) 2002-2014 Simon Flöry (simon.floery@rechenraum.com)
  *
  *  This program is free software; you can redistribute it and/or modify
@@ -41,9 +41,9 @@
 #define CLEARED_DISPLAY	"0"
 
 /* old, non-XDG method */
-#define CONFIG_FILE_NAME_OLD ".galculator"
+#define CONFIG_FILE_NAME_OLD ".galc"
 /* XDG spec */
-#define CONFIG_FILE_NAME "galculator.conf"
+#define CONFIG_FILE_NAME "galc.conf"
 
 #ifdef WITH_HILDON
 #define MAIN_GLADE_FILE 			PACKAGE_UI_DIR "/main_frame_hildon.ui"
@@ -223,4 +223,4 @@ extern s_current_status	current_status;
 #include "calc_basic.h"
 extern ALG_OBJECT	*main_alg;
 
-#endif /* galculator.h */
+#endif /* galc.h */

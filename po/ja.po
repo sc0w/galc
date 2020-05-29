@@ -19,7 +19,7 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../galculator.desktop.in.h:1
+#: ../galc.desktop.in.h:1
 msgid "Perform simple and scientific calculations"
 msgstr "単純な科学計算を実行します"
 
@@ -68,7 +68,7 @@ msgid ""
 "location %s.\n"
 msgstr "[%s] 設定ファイル: %sから%sに設定ファイルを移動します。%sの終了後、%sにある以前の設定ファイルを削除することが可能です。\n"
 
-#: ../src/galculator.h:92
+#: ../src/galc.h:92
 msgid "Please submit a bugreport."
 msgstr "バグの報告をして下さい。"
 
@@ -285,10 +285,10 @@ msgstr "[%s] (お使いのロケールでの) 小数点の位置はサポート�
 #: ../src/ui.c:89
 #, c-format
 msgid ""
-"[%s] Couldn't load %s. This file is necessary     to build galculator's user"
+"[%s] Couldn't load %s. This file is necessary     to build galc's user"
 " interface. Make sure you did a make install and the file     is "
 "accessible!\n"
-msgstr "[%s] %s を読み込めませんでした。このファイルは galculator のユーザ・インタフェースを構築するために必要です。正しくインストールされていることと、ファイルがアクセス可能であることを確認して下さい！\n"
+msgstr "[%s] %s を読み込めませんでした。このファイルは galc のユーザ・インタフェースを構築するために必要です。正しくインストールされていることと、ファイルがアクセス可能であることを確認して下さい！\n"
 
 #: ../src/ui.c:959 ../ui/main_frame.ui.h:17 ../ui/main_frame_hildon.ui.h:16
 msgid "Show _menu bar"
@@ -401,8 +401,8 @@ msgid ""
 msgstr "[%s] flexパーサーが %i 回以上呼び出されました。何か間違ったことをしていませんか？ もし違うなら: %s\n"
 
 #: ../ui/about.ui.in.h:1
-msgid "About galculator"
-msgstr "galculator について"
+msgid "About galc"
+msgstr "galc について"
 
 #: ../ui/about.ui.in.h:2
 msgid "Copyright (c) 2002-2014 by Simon Flöry <simon.floery@rechenraum.com>"
@@ -827,8 +827,8 @@ msgid "Binary"
 msgstr "2進数"
 
 #: ../ui/prefs_gtk2.ui.h:5 ../ui/prefs_gtk3.ui.h:5 ../ui/prefs-ume.ui.h:1
-msgid "galculator - Preferences"
-msgstr "galculator - 設定"
+msgid "galc - Preferences"
+msgstr "galc - 設定"
 
 #: ../ui/prefs_gtk2.ui.h:6 ../ui/prefs_gtk3.ui.h:6 ../ui/prefs-ume.ui.h:2
 msgid "A dialog that is used to change preferences settings."

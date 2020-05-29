@@ -1,6 +1,6 @@
 /*
  *  config_file.h - header file for config_file.c, manages config file access.
- *	part of galculator
+ *	part of galc
  *  	(c) 2002-2014 Simon Flöry (simon.floery@rechenraum.com)
  *
  *  This program is free software; you can redistribute it and/or modify
@@ -21,7 +21,7 @@
 #include <gtk/gtk.h>
 #include <glib.h>
 
-#include "galculator.h"
+#include "galc.h"
 
 #ifndef _CONFIG_FILE_H
 #define _CONFIG_FILE_H 1
@@ -136,7 +136,7 @@ typedef struct {
 	char 		*bin_sep_char;
 	/* 5th pref page */
 	int		def_number;		/* in accordance with enums in */
-	int		def_angle;		/* galculator.h */
+	int		def_angle;		/* galc.h */
 	int		def_notation;
 	int		stack_size;
 	gboolean	rem_display;

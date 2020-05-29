@@ -18,7 +18,7 @@ msgstr ""
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../galculator.desktop.in.h:1
+#: ../galc.desktop.in.h:1
 msgid "Perform simple and scientific calculations"
 msgstr "执行简单和科学级别的计算"
 
@@ -67,7 +67,7 @@ msgid ""
 "location %s.\n"
 msgstr "[%s] 配置文件: 我们将会从 %s 移动配置文件到 %s。在你退出 %s 后，你可以在 %s 删除旧的配置文件。\n"
 
-#: ../src/galculator.h:92
+#: ../src/galc.h:92
 msgid "Please submit a bugreport."
 msgstr "请提交一个 Bug 报告"
 
@@ -284,10 +284,10 @@ msgstr "[%s] (在地区配置中的) 小数点长度不被支持: >%s<\n你在�
 #: ../src/ui.c:89
 #, c-format
 msgid ""
-"[%s] Couldn't load %s. This file is necessary     to build galculator's user"
+"[%s] Couldn't load %s. This file is necessary     to build galc's user"
 " interface. Make sure you did a make install and the file     is "
 "accessible!\n"
-msgstr "[%s] 无法载入 %s . 这个文件在构建 galculator 的用户界面时是必须的。请确定你已经运行 make install 并且此文件可以访问！\n"
+msgstr "[%s] 无法载入 %s . 这个文件在构建 galc 的用户界面时是必须的。请确定你已经运行 make install 并且此文件可以访问！\n"
 
 #: ../src/ui.c:959 ../ui/main_frame.ui.h:17 ../ui/main_frame_hildon.ui.h:16
 msgid "Show _menu bar"
@@ -400,8 +400,8 @@ msgid ""
 msgstr "[%s] flex 解析器已经被调用超过 %i 次。你确定你自己在做什么吗？否则: %s\n"
 
 #: ../ui/about.ui.in.h:1
-msgid "About galculator"
-msgstr "关于 galculator"
+msgid "About galc"
+msgstr "关于 galc"
 
 #: ../ui/about.ui.in.h:2
 msgid "Copyright (c) 2002-2014 by Simon Flöry <simon.floery@rechenraum.com>"
@@ -826,8 +826,8 @@ msgid "Binary"
 msgstr "二进制"
 
 #: ../ui/prefs_gtk2.ui.h:5 ../ui/prefs_gtk3.ui.h:5 ../ui/prefs-ume.ui.h:1
-msgid "galculator - Preferences"
-msgstr "galculator - 个性化"
+msgid "galc - Preferences"
+msgstr "galc - 个性化"
 
 #: ../ui/prefs_gtk2.ui.h:6 ../ui/prefs_gtk3.ui.h:6 ../ui/prefs-ume.ui.h:2
 msgid "A dialog that is used to change preferences settings."
