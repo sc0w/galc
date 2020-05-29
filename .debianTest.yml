@@ -14,8 +14,12 @@ requires:
     - libxml-parser-perl
 
 build_scripts:
-   - cd ..
-   - ls -la
+  - cd ..
+  - mv rootdir/ galc-0.1.0/
+  - tar -cf - galc-0.1.0 | xz -9 -c - > galc-0.1.0.tar.xz
+  - cd galc-0.1.0
+  - dh_make --single -y
+  - dpkg-buildpackage -b -rfakeroot -us -uc
 #  - NOCONFIGURE=1 ./autogen.sh
 #  - scan-build $CHECKERS ./configure
 #  - scan-build $CHECKERS --keep-cc -o galc_clang_htmlreport make -j $CPU_COUNT
